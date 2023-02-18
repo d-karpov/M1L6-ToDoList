@@ -15,6 +15,7 @@
 		D314AA5029A15B360078D8E3 /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA4F29A15B360078D8E3 /* Tasks.swift */; };
 		D314AA5329A15F310078D8E3 /* ITaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5229A15F310078D8E3 /* ITaskManager.swift */; };
 		D314AA5529A160700078D8E3 /* OrderedTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5429A160700078D8E3 /* OrderedTaskManager.swift */; };
+		D314AA5729A162EC0078D8E3 /* SectionsForTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5629A162EC0078D8E3 /* SectionsForTaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D314AA4F29A15B360078D8E3 /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
 		D314AA5229A15F310078D8E3 /* ITaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITaskManager.swift; sourceTree = "<group>"; };
 		D314AA5429A160700078D8E3 /* OrderedTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedTaskManager.swift; sourceTree = "<group>"; };
+		D314AA5629A162EC0078D8E3 /* SectionsForTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsForTaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				D314AA5229A15F310078D8E3 /* ITaskManager.swift */,
 				D314AA5429A160700078D8E3 /* OrderedTaskManager.swift */,
+				D314AA5629A162EC0078D8E3 /* SectionsForTaskManager.swift */,
 			);
 			path = Servicies;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				D314AA5029A15B360078D8E3 /* Tasks.swift in Sources */,
 				D314AA5329A15F310078D8E3 /* ITaskManager.swift in Sources */,
 				D314AA3829A15A3D0078D8E3 /* SceneDelegate.swift in Sources */,
+				D314AA5729A162EC0078D8E3 /* SectionsForTaskManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
