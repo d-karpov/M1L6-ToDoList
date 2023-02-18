@@ -13,8 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		
-		let viewController = UIViewController()
+		let viewController = ToDoListViewController()
+		
 		let navigationController = UINavigationController(rootViewController: viewController)
+		navigationController.navigationBar.prefersLargeTitles = true
+		
 		guard let windowScene = scene as? UIWindowScene else { return }
 		window = UIWindow(windowScene: windowScene)
 		window?.rootViewController = navigationController

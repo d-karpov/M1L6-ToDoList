@@ -16,6 +16,9 @@
 		D314AA5329A15F310078D8E3 /* ITaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5229A15F310078D8E3 /* ITaskManager.swift */; };
 		D314AA5529A160700078D8E3 /* OrderedTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5429A160700078D8E3 /* OrderedTaskManager.swift */; };
 		D314AA5729A162EC0078D8E3 /* SectionsForTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5629A162EC0078D8E3 /* SectionsForTaskManager.swift */; };
+		D314AA5A29A165370078D8E3 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5929A165370078D8E3 /* ToDoListViewController.swift */; };
+		D314AA5C29A165580078D8E3 /* IView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5B29A165580078D8E3 /* IView.swift */; };
+		D314AA5E29A166A40078D8E3 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D314AA5D29A166A40078D8E3 /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		D314AA5229A15F310078D8E3 /* ITaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ITaskManager.swift; sourceTree = "<group>"; };
 		D314AA5429A160700078D8E3 /* OrderedTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderedTaskManager.swift; sourceTree = "<group>"; };
 		D314AA5629A162EC0078D8E3 /* SectionsForTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsForTaskManager.swift; sourceTree = "<group>"; };
+		D314AA5929A165370078D8E3 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
+		D314AA5B29A165580078D8E3 /* IView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IView.swift; sourceTree = "<group>"; };
+		D314AA5D29A166A40078D8E3 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 		D314AA3429A15A3D0078D8E3 /* M1L6.ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				D314AA5829A1650C0078D8E3 /* View */,
 				D314AA5129A15F220078D8E3 /* Servicies */,
 				D314AA4C29A15ACE0078D8E3 /* Resources */,
 				D314AA4B29A15AB80078D8E3 /* Storyboards */,
@@ -112,8 +119,18 @@
 				D314AA5229A15F310078D8E3 /* ITaskManager.swift */,
 				D314AA5429A160700078D8E3 /* OrderedTaskManager.swift */,
 				D314AA5629A162EC0078D8E3 /* SectionsForTaskManager.swift */,
+				D314AA5D29A166A40078D8E3 /* Repository.swift */,
 			);
 			path = Servicies;
+			sourceTree = "<group>";
+		};
+		D314AA5829A1650C0078D8E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D314AA5929A165370078D8E3 /* ToDoListViewController.swift */,
+				D314AA5B29A165580078D8E3 /* IView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,11 +203,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D314AA5A29A165370078D8E3 /* ToDoListViewController.swift in Sources */,
+				D314AA5C29A165580078D8E3 /* IView.swift in Sources */,
 				D314AA3629A15A3D0078D8E3 /* AppDelegate.swift in Sources */,
 				D314AA4E29A15B280078D8E3 /* TaskManager.swift in Sources */,
 				D314AA5529A160700078D8E3 /* OrderedTaskManager.swift in Sources */,
 				D314AA5029A15B360078D8E3 /* Tasks.swift in Sources */,
 				D314AA5329A15F310078D8E3 /* ITaskManager.swift in Sources */,
+				D314AA5E29A166A40078D8E3 /* Repository.swift in Sources */,
 				D314AA3829A15A3D0078D8E3 /* SceneDelegate.swift in Sources */,
 				D314AA5729A162EC0078D8E3 /* SectionsForTaskManager.swift in Sources */,
 			);
