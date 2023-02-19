@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+protocol IView {
+	func render(_ viewData: ViewData) -> Void
+}
+
+extension ToDoListViewController: IView {
+	func render(_ viewData: ViewData) {
+	}
+}

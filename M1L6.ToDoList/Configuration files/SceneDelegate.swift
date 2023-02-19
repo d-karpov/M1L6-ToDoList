@@ -13,7 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		
+		let taskManager = TaskManager(with: StubRepository().list())
+		let orderedTaskManager = OrderedTaskManager(taskManager)
 		let viewController = ToDoListViewController()
+		
+		
 		
 		let navigationController = UINavigationController(rootViewController: viewController)
 		navigationController.navigationBar.prefersLargeTitles = true

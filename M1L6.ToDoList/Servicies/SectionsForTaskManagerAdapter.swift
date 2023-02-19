@@ -1,5 +1,5 @@
 //
-//  SectionsForTaskManager.swift
+//  SectionsForTaskManagerAdapter.swift
 //  M1L6.ToDoList
 //
 //  Created by Денис Карпов on 18.02.2023.
@@ -8,19 +8,19 @@
 import Foundation
 
 
-protocol ISectionForTaskManager {
-	func getTitlesOfSections(at section: Int) -> [String]
+protocol ISectionsForTaskManager {
+	func getTitlesOfSections() -> [String]
 	func getSectionTasks(at section: Int) -> [Task]
 }
 
-final class SectionForTaskManger: ISectionForTaskManager {
+final class SectionsForTaskMangerAdapter: ISectionsForTaskManager {
 	private let taskManager: ITaskManager
 	
 	init(_ taskManager: ITaskManager) {
 		self.taskManager = taskManager
 	}
 	
-	func getTitlesOfSections(at section: Int) -> [String] {
+	func getTitlesOfSections() -> [String] {
 		return ["Completed","Not completed"]
 	}
 	

@@ -10,13 +10,13 @@ import Foundation
 protocol IRepository {
 	associatedtype T
 	
-	func list(completionHandler: ([T]?,Error?) -> Void)
+	func list() -> [T]
 }
 
 final class StubRepository: IRepository {
 	typealias T = Task
 	
-	func list(completionHandler: ([Task]?, Error?) -> Void) {
+	func list() -> [T] {
 		let tasks = [
 			ImportantTask(title: "See lesson", completed: true, priority: .low),
 			RegularTask(title: "Go to shop", completed: false),
@@ -24,6 +24,6 @@ final class StubRepository: IRepository {
 			ImportantTask(title: "Make Swiftbook homework", completed: false, priority: .high),
 			ImportantTask(title: "Make lesson's test", completed: false, priority: .medium)
 		]
-		completionHandler(tasks, nil)
+		return tasks
 	}
 }
