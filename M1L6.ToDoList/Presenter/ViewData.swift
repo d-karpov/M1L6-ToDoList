@@ -7,5 +7,10 @@
 
 import Foundation
 
+/// Структура описывающая поля ячейки таблицы
 struct ViewData {
+	let text: String
+	let secondaryText: String?
+	let isOverDue: Bool
+	var isCompleted: Bool
 }

@@ -7,6 +7,19 @@
 
 import Foundation
 
+/// Протокол описывающий публичный интерфейс для Менеджера задач
+///
+/// Содержит методы:
+///
+/// func allTasks() -> [Task] - получить все задачи
+///
+/// func allCompletedTasks() -> [Task] - получить завершенные задачи
+///
+/// func allNotCompletedTasks() -> [Task] - получить не завершенные задачи
+///
+/// func addTask(_ task: Task) - добавить задачу
+///
+/// func deleteTask(_ task: Task) - удалить задачу
 protocol ITaskManager {
 	func allTasks() -> [Task]
 	func allCompletedTasks() -> [Task]

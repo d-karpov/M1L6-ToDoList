@@ -7,12 +7,18 @@
 
 import Foundation
 
+/// Протокол описывающий интерфейс для шаблона Репозиторий
+///
+/// Обязывает реализовать следующие методы:
+///
+/// func list() -> [T] - получить массив данных
 protocol IRepository {
 	associatedtype T
 	
 	func list() -> [T]
 }
 
+/// Класс реализующий протокол IRepository для фиксированного массива данных
 final class StubRepository: IRepository {
 	typealias T = Task
 	

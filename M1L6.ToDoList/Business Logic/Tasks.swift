@@ -7,8 +7,13 @@
 
 import Foundation
 
+/// Класс описывающий задачу
 class Task {
+	
+	/// Краткое описание задачи
 	let title: String
+	
+	/// Статус завершения
 	var completed: Bool
 	
 	init(title: String, completed: Bool) {
@@ -17,16 +22,23 @@ class Task {
 	}
 }
 
+/// Класс описывающий обычную задачу, унаследован от Task
 final class RegularTask: Task { }
 
 
+/// Класс описывающий важную задачу, унаследован от Task
 final class ImportantTask: Task {
 	
+	
+	/// Перечисление содержащее возможные приоритеты задач
 	enum Priority: Int {
 		case high = 1, medium, low
 	}
 	
+	/// Приоритет задачи
 	var priority: Priority
+	
+	/// Срок выполнения
 	var dueDate: Date {
 		getDueDate()
 	}

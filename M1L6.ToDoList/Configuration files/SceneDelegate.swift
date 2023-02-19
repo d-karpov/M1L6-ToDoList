@@ -16,7 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let taskManager = TaskManager(with: StubRepository().list())
 		let orderedTaskManager = OrderedTaskManager(taskManager)
 		let viewController = ToDoListViewController()
-		
+		let sectionManager = SectionsForTaskMangerAdapter(orderedTaskManager)
+		let presenter = Presenter(view: viewController,
+								  taskManager: orderedTaskManager,
+								  sectionManager: sectionManager)
+		viewController.presenter = presenter
 		
 		
 		let navigationController = UINavigationController(rootViewController: viewController)
@@ -28,4 +32,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		window?.makeKeyAndVisible()
 	}
 }
-
