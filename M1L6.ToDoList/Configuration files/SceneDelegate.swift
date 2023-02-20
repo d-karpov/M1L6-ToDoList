@@ -18,7 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		let viewController = ToDoListViewController()
 		let sectionManager = SectionsForTaskMangerAdapter(orderedTaskManager)
 		let presenter = Presenter(view: viewController,
-								  taskManager: orderedTaskManager,
 								  sectionManager: sectionManager)
 		viewController.presenter = presenter
 		

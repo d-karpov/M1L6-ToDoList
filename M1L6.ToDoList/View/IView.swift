@@ -8,7 +8,7 @@
 import Foundation
 
 /// Протокол описывающий публичный интерфейс View
-protocol IView {
+protocol IView: AnyObject {
 	func render(_ viewData: ViewData) -> Void
 }
 

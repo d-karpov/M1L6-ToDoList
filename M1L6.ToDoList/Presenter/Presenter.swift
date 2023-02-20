@@ -31,14 +31,12 @@ protocol IPresenter {
 }
 /// Класс реализующий презентер в соотвествии с протоколом IPresenter
 final class Presenter: IPresenter {
-
-	private let view: IView
-	private let taskManager: ITaskManager
+	
+	private weak var view: IView?
 	private let sectionManager: ISectionsForTaskManagerAdapter
 	
-	init(view: IView, taskManager: ITaskManager, sectionManager: ISectionsForTaskManagerAdapter) {
+	init(view: IView, sectionManager: ISectionsForTaskManagerAdapter) {
 		self.view = view
-		self.taskManager = taskManager
 		self.sectionManager = sectionManager
 	}
 	/// Метод готовит заголовк для секции таблицы
@@ -70,18 +68,20 @@ final class Presenter: IPresenter {
 		let task = sectionManager.getSectionTasks(at: indexPath.section)[indexPath.row]
 		if let task = task as? ImportantTask {
 			let dueDateText = task.dueDate.formatted(date: .numeric, time: .omitted)
-			view.render(ViewData(text: task.title,
-								 secondaryText: "Priority - \(task.priority)  Deadline: \(dueDateText)",
-								 isOverDue: Date.now > task.dueDate,
-								 isCompleted: task.completed)
+			view?.render(ViewData(
+				text: task.title,
+				secondaryText: "Priority - \(task.priority)  Deadline: \(dueDateText)",
+				isOverDue: Date.now > task.dueDate,
+				isCompleted: task.completed)
 			)
 		}
 		
 		if let task = task as? RegularTask {
-			view.render(ViewData(text: task.title ,
-								 secondaryText: nil,
-								 isOverDue: false,
-								 isCompleted: task.completed)
+			view?.render(ViewData(
+				text: task.title,
+				secondaryText: nil,
+				isOverDue: false,
+				isCompleted: task.completed)
 			)
 		}
 	}
@@ -92,5 +92,4 @@ final class Presenter: IPresenter {
 		let task = sectionManager.getSectionTasks(at: indexPath.section)[indexPath.row]
 		task.completed.toggle()
 	}
-	
 }
